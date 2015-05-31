@@ -1,0 +1,37 @@
+<ion-view view-title="Browse">
+
+  <ion-content>
+
+    <p>fileTitle: {{fileTitle}}</p>
+
+    <p>filePath: {{filePath}}</p>
+
+    <p>media: {{media}}</p>
+
+    <p>isRecording: {{isRecording}}</p>
+
+    <button 
+      ng-disabled="isRecording"
+      ng-click="startRecord()"
+      >Record
+    </button>
+    <button 
+      ng-disabled="!isRecording"
+      ng-click="stopRecord()"
+      >Stop Record
+    </button>
+    <button 
+      ng-disabled="hasAudio"
+      ng-click="play()"
+      >Play
+    </button>
+
+    <br><br>
+
+    <button 
+      ng-click="writeFile()"
+      >writeFile
+    </button>
+
+  </ion-content>
+</ion-view>
